@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <header>
+          <div class="logo">
+            <img src="./assets/images/logo.svg" />
+          </div>
+          <div class="hamburger">
+            <img src="./assets/images/icon-menu.svg" id="images" />
+          </div>
+
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">New</a>
+              </li>
+              <li>
+                <a href="#">Popular</a>
+              </li>
+              <li>
+                <a href="#">Trending</a>
+              </li>
+              <li>
+                <a href="#">Categories</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+      <div class="container">
+        <div class="column-1">
+          <!--Desktop iamge-->
+          <img
+            class="desktop-image"
+            src="./assets/images/image-web-3-desktop.jpg"
+          />
+          <!--Mobile Image-->
+          <img
+            class="mobile-image"
+            src="./assets/images/image-web-3-mobile.jpg"
+          />
+
+          <div class="container-2">
+            <div class="column3">
+              <h1>The Bright Future of Web 3.0?</h1>
+            </div>
+            <div class="column4">
+              <p>
+                We dive into the next evloution of the web that claims to put
+                the poer of the platforms back into the hands of the people. But
+                is it really fulfilling its promise?
+              </p>
+              <button>READ MORE</button>
+            </div>
+          </div>
+        </div>
+        <div class="column-2">
+          <div class="grid">
+            <div>
+              <h1>New</h1>
+              <h4>Hydrogen VS Electric Cars</h4>
+              <p>Will hydrogen-fueled cars ever cath up to EVs</p>
+            </div>
+            <hr />
+            <div>
+              <h4>The Downloadseide of AI Activity</h4>
+
+              <p>
+                What are the possible adverse effects of on demand AI image
+                generation?
+              </p>
+            </div>
+            <hr />
+            <div>
+              <h4>Is VC Funding Drying Up?</h4>
+              <p>
+                Private funding by VC firms is down 50% YOY. We take a look at
+                what that means.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-3">
+        <div class="column-1">
+          <img src="./assets/images/image-retro-pcs.jpg" />
+
+          <div>
+            <h1>01</h1>
+            <h4>Reviving Retro PCs</h4>
+            <p>What Happens when old PCs are gieven modern upgrades</p>
+          </div>
+        </div>
+        <div class="column-1">
+          <img src="./assets//images/image-top-laptops.jpg" />
+          <div>
+            <h1>02</h1>
+            <h4>Top 10 Laptop of 2022</h4>
+            <p>Our best picks for varius needs and budgets</p>
+          </div>
+        </div>
+        <div class="column-1">
+          <img src="./assets/images/image-gaming-growth.jpg" />
+          <div>
+            <h1>03</h1>
+            <h4>The Growth of Gaming</h4>
+            <p>WHow the pandemic has spraked fresh opportunities</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    hamburger = document.querySelector(".hamburger");
+    navmenu = document.querySelector("ul");
+    hamburger.onclick = function () {
+      navbar = document.querySelector("nav");
+      navbar.classList.toggle("active");
+    };
+    const img = document.getElementById("images");
+    let toggle = true;
+    img.addEventListener("click", function () {
+      toggle = !toggle;
+      if (toggle) {
+        img.src = "./assets/images/icon-menu.svg";
+      } else {
+        img.src = "./assets/images/icon-menu-close.svg";
+      }
+    });
+
+    document.querySelectorAll("a").forEach((n) =>
+      n.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+      })
+    );
+  </script>
+</html>
